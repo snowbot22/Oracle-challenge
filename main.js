@@ -63,25 +63,20 @@ function desCrypt(){
     else{
         arr= [...text];
         for (i=0 ; i<arr.length; i++){
-            switch (arr[i]){
-                case "ai":
-                    arr[i]= "a";
-                break;
-                case "enter":
-                    arr[i]= "e";
-                break;
-                case "imes":
-                    arr[i]= "i";
-                break;
-                case "ober":
-                    arr[i]= "o";
-                break;
-                case "ufat":
-                    arr[i]= "u"
-                break;
-                default: 
-                    null
-                break;                        
+            if(arr[i] + arr[i+1] == "ai"){
+                arr[i]= "a" , arr[i+1]= "";
+            }
+            else if(arr[i] + arr[i+1]+arr[i+2]+arr[i+3]== "ober"){
+                arr[i]= "o" , arr[i+1]= "", arr[i+2]= "", arr[i+3]= "";
+            }
+            else if(arr[i] + arr[i+1]+arr[i+2]+arr[i+3]== "imes"){
+                arr[i]= "i" , arr[i+1]= "", arr[i+2]= "", arr[i+3]= "";
+            }
+            else if(arr[i] + arr[i+1]+arr[i+2]+arr[i+3]== "ufat"){
+                arr[i]= "u" , arr[i+1]= "", arr[i+2]= "", arr[i+3]= "";
+            }
+            else if(arr[i] + arr[i+1]+arr[i+2]+arr[i+3]+arr[i+4]== "enter"){
+                arr[i]= "e" , arr[i+1]= "", arr[i+2]= "", arr[i+3]= "", arr[i+4]= "";
             }
         }
         encrypt= arr.join("");
