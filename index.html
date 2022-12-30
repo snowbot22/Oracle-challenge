@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-width:425px)">
+    <link rel="stylesheet" href="tablet.css" media="screen and (min-width:426px) and (max-width:768px)">
+    <link rel="stylesheet" href="desktop.css" media="screen and (min-width: 769px)">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <figure class="header__figure">
+            <img class="img--large" src="https://i.ibb.co/YLvCp14/alure-icon.png" alt="alure-icon">
+        </figure>
+    </header>
+    <main>
+        <article class="article--1">
+            <form class="article--1__form" action="#">
+                <label class="article--1__form__label" for="text">
+                    <textarea class="article--1__form__label__textarea" name="text" id="text" placeholder="Ingrese el texto aqui"></textarea>
+                </label>
+                <div class="article--1__form__warning">
+                    <figure class="article--1__form__figure">
+                        <img class="img--large" src="https://i.ibb.co/4dvnPH1/warning-icon.png" alt="warning-icon">
+                    </figure>
+                    <p class="article--1__form__p">
+                        Solo letras minúsculas y sin acentos
+                    </p>
+                </div>
+                <div class="article--1__form__btns">
+                    <button id="encrypt" type="button" class="btn btn--blue">
+                        Encriptar
+                    </button>
+                    <button id="desEncrypt" type="button" class="btn btn--white"> 
+                        Desencriptar
+                    </button>
+                </div>
+            </form>
+            <section class="article--1__output">
+                <div id="textFalse" class="article--1__output--false">
+                    <figure>
+                        <img src="https://i.ibb.co/KqQJxBd/Mu-eco.png" alt="icon--false" class="img--large img--false">
+                    </figure>
+                    <h2 class="article--1__output--false__h2">
+                        Ningun mensaje fue encontrado
+                    </h2>
+                    <p class="article--1__output--false__p">
+                        Ingresa el texto que desees encriptar o desencriptar
+                    </p>
+                </div>
+                <div id="textTrue" class="article--1__output--true hidden">
+                    <p id="textEncrypt" class="article--1__output--true__p">
+                        
+                    </p>
+                    <button class="btn btn--white btn--large">
+                        Copiar
+                    </button>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
