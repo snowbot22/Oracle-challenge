@@ -5,6 +5,7 @@ let desEncryptButton= document.getElementById("desEncrypt");
 let encryptOutput= document.getElementById("textEncrypt");
 let encryptFalse= document.getElementById("textFalse");
 let encryptTrue= document.getElementById("textTrue");
+let copyButton= document.getElementById("copyBtn");
 let text;
 let arr;
 let encrypt;
@@ -81,9 +82,18 @@ function desCrypt(){
         }
         encrypt= arr.join("");
         encryptFalse.classList.add("hidden");
-        encryptOutput.innerHTML=encrypt;
+        encryptOutput.innerText=encrypt;
         encryptTrue.classList.remove("hidden");
     }
 }
 
-desEncryptButton.addEventListener("click", desCrypt)
+desEncryptButton.addEventListener("click", desCrypt);
+
+//FUNCION DE COPIAR AL PORTAPAPELES
+
+function copy(){
+    navigator.clipboard.writeText(encryptOutput.innerText);
+    console.log(encryptOutput.innerText);
+}
+
+copyButton.addEventListener("click", copy);
